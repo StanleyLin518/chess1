@@ -17,12 +17,12 @@ public class Player : MonoBehaviour
 
 	public int xx;
 	public int yy;
+    public color Force;
+    //	public string SelectFlagPosition_x_y;
+    //	public TYPE types;
 
-//	public string SelectFlagPosition_x_y;
-//	public TYPE types;
-
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
 	{
 		GetComponent<Button>().onClick.AddListener (onClick_selectchess);
 
@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
 	protected virtual void onClick_selectchess()
 	{
 		Debug.Log ("abc");
-		if (ChessScript.controll.selectobject == false) 
+		if (ChessScript.Instance.selectobject == false) 
 		{
 //			ChessScript.controll.player = GetComponent<Player> ();
 //			FlagMove ();
@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
 //			playerselect ();
 			GetComponent<Button> ().image.color = Color.gray;
 
-			ChessScript.controll.selectobject = true;
+			ChessScript.Instance.selectobject = true;
 		}
 		else 
 		{

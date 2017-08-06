@@ -31,10 +31,10 @@ public class Grid : MonoBehaviour {
 	}
 	public void onClick_btn_grid()
 	{
-		if (ChessScript.controll.selectobject == true)
+		if (ChessScript.Instance.selectobject == true)
 		{
-			ChessScript.controll.selectplayer.transform.SetParent (transform);
-			ChessScript.controll.selectplayer.transform.localPosition = Vector2.zero;
+			ChessScript.Instance.selectplayer.transform.SetParent (transform);
+			ChessScript.Instance.selectplayer.transform.localPosition = Vector2.zero;
 //			ChessScript.controll.Flag_newcoordinatesx - ChessScript.controll.Flag_coordinatesx;
 //			posX = x - ChessScript.controll.Flag_newcoordinatesx;
 //			posY = y - ChessScript.controll.Flag_newcoordinatesy;
@@ -48,7 +48,7 @@ public class Grid : MonoBehaviour {
 //
 //			ChessScript.controll.player = null;
 //			ChessScript.controll.type = TYPE.None;
-			ChessScript.controll.selectobject = false;
+			ChessScript.Instance.selectobject = false;
 		}
 		else 
 		{

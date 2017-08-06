@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 
 public class ChessScript : MonoBehaviour {
-	public static ChessScript controll;
+	public static ChessScript Instance;
 
 //	public Player player = new Player();
 	public GameObject grids;
@@ -19,10 +19,12 @@ public class ChessScript : MonoBehaviour {
 	public TYPE type;
 	public Player selectplayer;
 
-	void Awake()
+    public color Turn_Camp;
+
+    void Awake()
 	{
-		controll = this;
-	}
+        Instance = this;
+    }
 
 	void Start () 
 	{
